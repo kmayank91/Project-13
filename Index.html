@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 13 Implementation Framework</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+            header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .logo {
+            width: 200px; /* Adjust as needed */
+        }
+
+ footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ddd;
+        }
+
+.highlight {
+            color: red;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+ .video-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 100px
+        }
+        .video-container iframe {
+            width: 560px;
+            height: 315px;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+<img src="casis-logo-email.png" alt="Logo Left" class="logo">
+  <h1>Project 13 Implementation Framework Toolkit</h1>
+<img src="university-of-toronto-vector-logo.png" alt="Logo Right" class="logo">
+
+      
+    </header>
+
+    <section id="questions">
+        <h2>Answer the following questions:</h2>
+
+        <div class="question">
+            <p>Do you have a <a href="https://www.project13.info/pillars/capable-owner/" target="_blank">Capable Owner</a> for Project 13?</p>
+            <button onclick="showOwnerQuestions()">Yes</button>
+            <button onclick="showNoOwnerRecommendations()">No</button>
+        </div>
+
+
+      <div class="question">
+            <p>Do you have a <a href="https://www.project13.info/pillars/governance/" target="_blank">Governance Infrastrutcure</a> in place for Project 13?</p>
+            <button onclick="showGovernanceQuestions()">Yes</button>
+            <button onclick="showNoGovernanceRecommendations()">No</button>
+        </div>
+
+
+
+      <div class="question">
+            <p>Do you have a <a href="https://www.project13.info/pillars/organisation/" target="_blank">Organisation Capabilities</a> in place for Project 13?</p>
+            <button onclick="showOrganisationQuestions()">Yes</button>
+            <button onclick="showNoOrganisationRecommendations()">No</button>
+        </div>
+
+
+
+    <div class="question">
+            <p>Do you have a <a href="https://www.project13.info/pillars/integration/" target="_blank"> Integration Capabilities</a> in place for Project 13?</p>
+            <button onclick="showIntegrationQuestions()">Yes</button>
+            <button onclick="showNoIntegrationRecommendations()">No</button>
+        </div>
+
+
+
+    <div class="question">
+            <p>Do you have a <a href="https://www.project13.info/pillars/digital-transformation/" target="_blank">Digital Transformation capabilities </a>  in place for Project 13?</p>
+            <button onclick="showDigitalTransformationQuestions()">Yes</button>
+            <button onclick="showNoDigitalTransformationRecommendations()">No</button>
+        </div>
+
+
+
+        <!-- Additional questions for each section go here based on user responses -->
+
+    </section>
+
+    <section id="output" style="display: none;">
+        <h2>Implementation Recommendations</h2>
+        <p id="outputText"></p>
+    </section>
+
+    <script>
+        function showOwnerQuestions() {
+            const questionSection = document.getElementById('questions');
+            const outputSection = document.getElementById('output');
+            const outputText = document.getElementById('outputText');
+
+            questionSection.style.display = 'none';
+            outputSection.style.display = 'block';
+            outputText.innerHTML = `<strong>Owner Capabilities required:<br><br>
+        Understanding Project 13<br> 
+        Leadership<br> 
+        Risk Management<br>  
+        Decision-Making <br> 
+        Performance Metrics<br> </strong>`;
+
+
+function showImprovementRecommendations() {
+    const explanation = `
+        Please choose one of the following options:
+        A - Understanding Project 13 
+        B - Leadership
+        C - Risk Management 
+        D - Decision-Making 
+        E - Performance Metrics 
+    `;
+    const subsection = prompt(explanation);
+    const outputText = document.getElementById('outputText');
+    outputText.innerHTML += `<br><strong>Improvement Recommendations:</strong>`;
+
+    switch (subsection) {
+        case 'A':
+            outputText.innerHTML += `
+                <p>A. Understanding Project 13 </p>
+                <ul>
+                    <li>Analyzing Project 13 objectives to match infrastructure delivery requirements.</li>
+                    <li>Evaluating scope and potential challenges for infrastructure alignment.</li>
+                    <li>Impact assessment on infrastructure development within Project 13.</li>
+                </ul>
+            `;
+            break;
+        
+        case 'B':
+            outputText.innerHTML += `
+                <p>B. Leadership </p>
+                <ul>
+                    <li>Identifying key infrastructure project leaders and their roles.</li>
+                    <li>Nurturing infrastructure-specific leadership for complex challenges.</li>
+                    <li>Ensuring effective communication and decision-making for infrastructure success.</li>
+                </ul>
+            `;
+            break;
+
+        case 'C':
+            outputText.innerHTML += `
+                <p>C. Risk Management </p>
+                <ul>
+                    <li>Mitigating risks related to material sourcing, environmental impact, and construction.</li>
+                    <li>Contingency planning for unforeseen events in infrastructure projects.</li>
+                    <li>Strategies to address challenges unique to infrastructure delivery.</li>
+                </ul>
+            `;
+            break;
+
+        case 'D':
+            outputText.innerHTML += `
+                <p>D. Decision-Making </p>
+                <ul>
+                    <li>Selecting technology tailored to infrastructure requirements.</li>
+                    <li>Methodologies optimized for efficient infrastructure development.</li>
+                    <li>Allocating resources effectively within infrastructure projects.</li>
+                </ul>
+            `;
+            break;
+
+        case 'E':
+            outputText.innerHTML += `
+                <p>E. Performance Metrics </p>
+                <ul>
+                    <li>Defining KPIs for timely infrastructure delivery.</li>
+                    <li>Metrics to assess cost-effectiveness and sustainability in infrastructure.</li>
+                    <li>Measuring the environmental impact of infrastructure projects.</li>
+                </ul>
+            `;
+            break;
+
+        default:
+            outputText.innerHTML += `<p>Please enter a valid option (A/B/C/D/E).</p>`;
+            break;
+    }
+}
+
+
+
+
+
+            // Additional questions for capable owner
+            askNextQuestion();
+        }
+
+        function askNextQuestion() {
+            const outputText = document.getElementById('outputText');
+            outputText.innerHTML += `
+                <div class="question">
+                    <p>Do you want to learn more about how you may improve upon owner capabilities for Project 13 Implementation?</p>
+                    <button onclick="showImprovementRecommendations('A')">Yes</button>
+                    <button onclick="nextQuestion()">No</button>
+                </div>
+            `;
+        }
+
+        
+function showGovernanceQuestions() {
+    const questionSection = document.getElementById('questions');
+    const outputSection = document.getElementById('output');
+    const outputText = document.getElementById('outputText');
+
+    questionSection.style.display = 'none';
+    outputSection.style.display = 'block';
+    outputText.innerHTML = `<strong>Governance Capabilities required: <br><br>
+Regulatory Compliance <br>
+Stakeholder Engagement <br>
+Ethics and Conduct<br>
+Quality Assurance<br>
+
+
+
+
+</strong>`;
+
+    // Additional questions for governance
+    askGovernanceQuestion();
+}
+
+function askGovernanceQuestion() {
+    const outputText = document.getElementById('outputText');
+    outputText.innerHTML += `
+        <div class="question">
+            <p>Do you want to learn more about how you may improve upon governance capabilities for Project 13 Implementation?</p>
+            <button onclick="showImprovementRecommendations('B')">Yes</button>
+            <button onclick="nextQuestion()">No</button>
+        </div>
+    `;
+}
+
+function showOrganisationQuestions() {
+    const questionSection = document.getElementById('questions');
+    const outputSection = document.getElementById('output');
+    const outputText = document.getElementById('outputText');
+
+    questionSection.style.display = 'none';
+    outputSection.style.display = 'block';
+    outputText.innerHTML = `<strong>Organisation Capabilities required:<br><br>
+Collaboration<br>
+Resource Planning<br> 
+Culture for Innovation<br> 
+Change Management<br>
+</strong>`;
+
+    // Additional questions for organisation
+    askOrganisationQuestion();
+}
+
+function askOrganisationQuestion() {
+    const outputText = document.getElementById('outputText');
+    outputText.innerHTML += `
+        <div class="question">
+            <p>Do you want to learn more about how you may improve upon organisation capabilities for Project 13 Implementation?</p>
+            <button onclick="showImprovementRecommendations('C')">Yes</button>
+            <button onclick="nextQuestion()">No</button>
+        </div>
+    `;
+}
+
+function showIntegrationQuestions() {
+    const questionSection = document.getElementById('questions');
+    const outputSection = document.getElementById('output');
+    const outputText = document.getElementById('outputText');
+
+    questionSection.style.display = 'none';
+    outputSection.style.display = 'block';
+    outputText.innerHTML = `<strong>Integration Capabilities required:<br><br>
+Team Building<br>
+Training<br>
+Conflict Resolution<br> 
+Feedback Mechanisms<br>
+</strong>`;
+
+    // Additional questions for integration
+    askIntegrationQuestion();
+}
+
+function askIntegrationQuestion() {
+    const outputText = document.getElementById('outputText');
+    outputText.innerHTML += `
+        <div class="question">
+            <p>Do you want to learn more about how you may improve upon integration capabilities for Project 13 Implementation?</p>
+            <button onclick="showImprovementRecommendations('D')">Yes</button>
+            <button onclick="nextQuestion()">No</button>
+        </div>
+    `;
+}
+
+function showDigitalTransformationQuestions() {
+    const questionSection = document.getElementById('questions');
+    const outputSection = document.getElementById('output');
+    const outputText = document.getElementById('outputText');
+
+    questionSection.style.display = 'none';
+    outputSection.style.display = 'block';
+    outputText.innerHTML = `<strong>Digital Transformation Capabilities required:<br><br>
+Technology Adoption<br>
+Data Management<br>
+Cyber Security<br>
+Digital Literacy<br>
+</strong>`;
+
+    // Additional questions for digital transformation
+    askDigitalTransformationQuestion();
+}
+
+function askDigitalTransformationQuestion() {
+    const outputText = document.getElementById('outputText');
+    outputText.innerHTML += `
+        <div class="question">
+            <p>Do you want to learn more about how you may improve upon digital transformation capabilities for Project 13 Implementation?</p>
+            <button onclick="showImprovementRecommendations('E')">Yes</button>
+            <button onclick="nextQuestion()">No</button>
+        </div>
+    `;
+}
+
+
+        function nextQuestion() {
+            // Implement logic to handle the next set of questions
+            // For simplicity, just reload the page in this example
+            location.reload();
+        }
+
+        function showNoOwnerRecommendations() {
+            const questionSection = document.getElementById('questions');
+            const outputSection = document.getElementById('output');
+            const outputText = document.getElementById('outputText');
+
+            questionSection.style.display = 'none';
+            outputSection.style.display = 'block';
+            outputText.innerHTML = `<strong>No Capable Owner:</strong>`;
+
+            // Recommendations for no capable owner
+            outputText.innerHTML += `
+                <p>A capable owner has to have:</p>
+                <p>A. Understanding Project 13 which can be done by: </p>
+                <ul>
+                    <li>Analyzing Project 13 objectives to match infrastructure delivery requirements.</li>
+                    <li>Evaluating scope and potential challenges for infrastructure alignment.</li>
+                    <li>Impact assessment on infrastructure development within Project 13.</li>
+                </ul>
+                <p>B. Risk Management Strategy in place which can be achieved by: </p>
+                <ul>
+                    <li>Mitigating risks related to material sourcing, environmental impact, and construction.</li>
+                    <li>Contingency planning for unforeseen events in infrastructure projects.</li>
+                    <li>Strategies to address challenges unique to infrastructure delivery.</li>
+                </ul>
+		<p>C. Leadership Aspect which can be nurtured by: </p>
+                <ul>
+                    <li>Identifying key infrastructure project leaders and their roles.</li>
+                    <li>Nurturing infrastructure-specific leadership for complex challenges.</li>
+                    <li>Ensuring effective communication and decision-making for infrastructure success.</li>
+                </ul>
+                <p>D. Decision-Making process in place focussing on: </p>
+                <ul>
+                    <li>Selecting technology tailored to infrastructure requirements.</li>
+                    <li>Methodologies optimized for efficient infrastructure development.</li>
+                    <li>Allocating resources effectively within infrastructure projects.</li>
+                </ul>
+                <p>E. Performance Metrics for evaluation that can be attained by: </p>
+                <ul>
+                    <li>Defining KPIs for timely infrastructure delivery.</li>
+                    <li>Metrics to assess cost-effectiveness and sustainability in infrastructure.</li>
+                    <li>Measuring the environmental impact of infrastructure projects.</li>
+                </ul>
+
+                 `;
+
+            askNextQuestion();
+        }
+
+
+
+
+function showNoGovernanceRecommendations() {
+            const questionSection = document.getElementById('questions');
+            const outputSection = document.getElementById('output');
+            const outputText = document.getElementById('outputText');
+
+            questionSection.style.display = 'none';
+            outputSection.style.display = 'block';
+            outputText.innerHTML = `<strong>No Governance Structure:</strong>`;
+
+            // Recommendations for no governance strcuture
+            outputText.innerHTML += `
+                <p>A governance structure has to have:</p>
+                <p>A. Regulatory Compliance protocol which can be done by: </p>
+                <ul>
+                    <li>Adherence to environmental and safety regulations in infrastructure.</li>
+                    <li>Compliance with building codes and standards for infrastructure construction.</li>
+                    <li>Legal compliance in infrastructure development.</li>
+                </ul>
+                <p>B. Stakeholder Engagement strategy in place which can be achieved by: </p>
+                <ul>
+                    <li>Strategies for community involvement in infrastructure projects.</li>
+                    <li>Transparent communication channels for stakeholders in infrastructure delivery.</li>
+                    <li>Public engagement forums focusing on infrastructure aspects.</li>
+                </ul>
+		<p>C.Ethics and Conduct Policy which can be nurtured by: </p>
+                <ul>
+                    <li>Addressing ethical concerns in land use within infrastructure.</li>
+                    <li>Practices promoting sustainability in infrastructure execution.</li>
+                    <li>Ensuring fair labor practices in infrastructure construction.</li>
+                </ul>
+                <p>D. Quality Assurance process in place focussing on: </p>
+                <ul>
+                    <li>Enforcing quality control measures specific to infrastructure projects.</li>
+                    <li>Certifications and standards compliance for infrastructure development.</li>
+                    <li>Adherence to industry quality benchmarks in infrastructure.</li>
+                </ul>
+              
+                 `;
+
+            askNextQuestion();
+        }
+
+function showNoOrganisationRecommendations() {
+    const questionSection = document.getElementById('questions');
+    const outputSection = document.getElementById('output');
+    const outputText = document.getElementById('outputText');
+
+    questionSection.style.display = 'none';
+    outputSection.style.display = 'block';
+    outputText.innerHTML = `<strong>No Organisation Capabilities:</strong>`;
+
+    // Recommendations for no organisation capabilities
+    outputText.innerHTML += `
+        <p>An organisation has to have:</p>
+        <p>A. Collaboration in Infrastructure Teams which can be done by: </p>
+        <ul>
+            <li>Strategies for cross-departmental collaboration in infrastructure projects.</li>
+            <li>Joint planning and problem-solving across infrastructure teams.</li>
+            <li>Synergy among infrastructure teams for efficient project execution.</li>
+        </ul>
+        <p>B. Resource Planning for Infrastructure which can be achieved by: </p>
+        <ul>
+            <li>Optimizing resource allocation in infrastructure construction.</li>
+            <li>Efficient raw material utilization in infrastructure projects.</li>
+            <li>Management of manpower and equipment in infrastructure delivery.</li>
+        </ul>
+        <p>C. Culture for Innovation in Infrastructure which can be nurtured by: </p>
+        <ul>
+            <li>Encouraging innovative approaches to technology adoption in infrastructure.</li>
+            <li>Continuous improvement strategies for infrastructure development.</li>
+            <li>Fostering a culture supporting advanced infrastructure techniques.</li>
+        </ul>
+        <p>D. Change Management in Infrastructure focussing on: </p>
+        <ul>
+            <li>Adapting to changes in infrastructure scope during project execution.</li>
+            <li>Minimizing disruption due to changes in infrastructure projects.</li>
+            <li>Strategies to manage alterations in infrastructure requirements.</li>
+        </ul>
+    `;
+
+    askNextQuestion();
+}
+
+function showNoIntegrationRecommendations() {
+    const questionSection = document.getElementById('questions');
+    const outputSection = document.getElementById('output');
+    const outputText = document.getElementById('outputText');
+
+    questionSection.style.display = 'none';
+    outputSection.style.display = 'block';
+    outputText.innerHTML = `<strong>No Integration Capabilities:</strong>`;
+
+    // Recommendations for no integration capabilities
+    outputText.innerHTML += `
+        <p>Integration has to have:</p>
+        <p>A. Team Building for Infrastructure Projects which can be done by: </p>
+        <ul>
+            <li>Developing specialized infrastructure teams for seamless collaboration.</li>
+            <li>Expertise enhancement strategies within infrastructure teams.</li>
+            <li>Integration methods for diverse infrastructure project teams.</li>
+        </ul>
+        <p>B. Training for Infrastructure Implementation which can be achieved by: </p>
+        <ul>
+            <li>Safety protocol training for infrastructure development.</li>
+            <li>Advanced machinery operation training for infrastructure tasks.</li>
+            <li>Sustainable construction practices training in infrastructure projects.</li>
+        </ul>
+        <p>C. Conflict Resolution in Infrastructure which can be nurtured by: </p>
+        <ul>
+            <li>Protocols to resolve conflicts within complex infrastructure environments.</li>
+            <li>Swift resolution strategies without affecting project progress.</li>
+            <li>Conflict management within intricate infrastructure projects.</li>
+        </ul>
+        <p>D. Feedback Mechanisms for Infrastructure Projects focussing on: </p>
+        <ul>
+            <li>Specialized feedback collection channels for infrastructure execution.</li>
+            <li>Implementing infrastructure-related feedback for project enhancement.</li>
+            <li>Continuous improvement based on infrastructure site feedback.</li>
+        </ul>
+    `;
+
+    askNextQuestion();
+}
+
+function showNoDigitalTransformationRecommendations() {
+    const questionSection = document.getElementById('questions');
+    const outputSection = document.getElementById('output');
+    const outputText = document.getElementById('outputText');
+
+    questionSection.style.display = 'none';
+    outputSection.style.display = 'block';
+    outputText.innerHTML = `<strong>No Digital Transformation Capabilities:</strong>`;
+
+    // Recommendations for no digital transformation capabilities
+    outputText.innerHTML += `
+        <p>Digital transformation has to have:</p>
+        <p>A. Digital Strategy which can be done by: </p>
+        <ul>
+            <li>Developing a clear vision and roadmap for digital transformation.</li>
+            <li>Aligning digital strategy with overall business objectives.</li>
+            <li>Investing in the right digital technologies and platforms.</li>
+        </ul>
+        <p>B. Digital Skills which can be achieved by: </p>
+        <ul>
+            <li>Upskilling employees in digital technologies and tools.</li>
+            <li>Recruiting digital talent and building a digital culture.</li>
+            <li>Providing continuous learning opportunities in digital areas.</li>
+        </ul>
+        <p>C. Digital Processes which can be nurtured by: </p>
+        <ul>
+            <li>Digitizing business processes for efficiency and effectiveness.</li>
+            <li>Implementing agile methodologies for rapid digital development.</li>
+            <li>Using data and analytics to drive decision-making.</li>
+        </ul>
+        <p>D. Digital Customer Engagement focussing on: </p>
+        <ul>
+            <li>Creating seamless digital customer experiences.</li>
+            <li>Using digital channels for customer engagement and service.</li>
+            <li>Leveraging social media and mobile platforms for customer connection.</li>
+        </ul>
+        <p>E. Digital Innovation for evaluation that can be attained by: </p>
+        <ul>
+            <li>Fostering a culture of digital innovation and experimentation.</li>
+            <li>Collaborating with external partners for digital innovation.</li>
+            <li>Investing in emerging technologies for future growth.</li>
+        </ul>
+    `;
+
+    askNextQuestion();
+}
+
+    </script>
+ <h1>Project 13 Videos</h1>
+<div class="video-container">
+        <div>
+<h2>What is Project 13</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cS1Fee-NcjM?si=LHXNsYe1ttPX_t-_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ </div>
+
+<div>
+    <h2>Integrated Project Delivery versus Project 13</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4cAPzw9pB_c?si=ZaEyQ7KP2lVOfT48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+ </div>
+
+<footer>
+        <p>For more information, visit the <a href="https://www.project13.info/" target="_blank"><b><span class="highlight">Official Project 13 Website</span></b></a>.</p>
+    </footer>
+</body>
+</html>
+
